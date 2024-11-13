@@ -1,0 +1,324 @@
+:: StoryTitle
+Prototype 3
+
+
+:: StoryData
+{
+  "ifid": "05C3E0E8-DAF7-446A-8570-317028E61FCD",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "intro",
+  "zoom": 1
+}
+
+
+:: bad1 {"position":"850,250","size":"100,100"}
+Without offering to get her anything, you return with your own coffee and take a sip, barely glancing at her.
+"Well, I’m here, like you asked," you say, voice flat. "Not sure what there’s left to talk about, but... go ahead. Say whatever you came to say."
+
+She watches you for a moment as you sit down with your own drink, her expression unreadable. Without a word, she stands up, heads to the counter, and returns with her own coffee before taking her seat again. Her gaze settles on you, a touch more guarded now. "Look," she starts, voice a bit firmer, "I didn’t come here for small talk." She stirs her drink, eyes briefly meeting yours. "It feels like every time we talk lately, you’re somewhere else. Like we’re just going through the motions." She leans back, crossing her arms. "So, what is it? Are we even in this together, or are you just... checked out?"
+
+(link: "You take a deep breath, meeting her gaze with a mix of honesty and vulnerability.")[
+    (set: $relationship to (min: $relationship + 25, 100))
+    (goto: "mid2")
+]
+
+(link: "You nod, folding your hands together as you search for the right words.")[
+    (set: $relationship to (min: $relationship + 25, 100))
+    (goto: "mid2")
+]
+
+(link: "You shrug slightly, looking away.")[
+    (set: $relationship to (max: $relationship - 25, 0))
+    (goto: "bad2")
+]
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
+
+
+:: bad2 {"position":"850,400","size":"100,100"}
+"I mean, maybe it just felt like you started pulling away first." You take a sip, eyes shifting. "I don’t know. It was like you stopped caring, or maybe I just stopped seeing the person I thought I knew. I tried to talk about it, but… I don’t know. Maybe we’re both at fault, or maybe it’s just not working anymore." You let out a small sigh, leaning back. "If this isn’t going to work, maybe it’s better if we just… cut our losses."
+
+Her brows knit together, and she leans back, crossing her arms. "Seriously? So it’s my fault now?" She lets out a frustrated sigh, her tone tinged with hurt. "I came here thinking we’d be mature enough to actually talk things through. But if we’re just going to point fingers, then what’s the point?" She looks away, the hurt evident in her eyes. "I wanted to make this work, I really did. But if you’re barely willing to try without shifting blame... then maybe I’m wasting my time here."
+
+(link: "You offer a small, hopeful smile, meeting her gaze.")[
+    (set: $relationship to (min: $relationship + 25, 100))
+    (goto: "mid3")
+]
+
+(link: "You lean back, your expression thoughtful and a bit distant.")[
+    (set: $relationship to (min: $relationship + 25, 100))
+    (goto: "mid3")
+]
+
+(link: "You sigh, frustration flickering across your face as you shake your head.")[
+    (set: $relationship to (max: $relationship - 25, 0))
+    (goto: "bad3")
+]
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
+
+
+:: bad3 {"position":"850,550","size":"100,100"}
+"I don’t know if I see the point in all this," you say, voice clipped. "We’ve been here before, trying to fix things, but it never really changes, does it?" You glance away, your tone dismissive. "Maybe we’re just too different, or maybe it’s not worth the effort anymore." You pause, crossing your arms. "If things were really meant to work, we wouldn’t be going in circles like this."
+
+Her face hardens, her eyes flashing with frustration as she slams her hands on the table. "You’re unbelievable!" She snaps, voice raised. "Every time we try to talk about this, you act like it’s all just some game!" She stands up abruptly, her chair scraping loudly against the floor. "I don’t even know why I’m bothering with you anymore. You’re just so damn stubborn!" Her voice shakes with anger. "Maybe you don’t even care anymore—maybe you’re just too selfish to see it."
+
+(link: "You look at her with sadness in your eyes, your shoulders slumping as the weight of the moment hits you.")[
+    (set: $relationship to (min: $relationship + 25, 100))
+    (goto: "midEnd")
+]
+
+(link: "You take a deep breath, your gaze serious and a little sad as you look at her.")[
+    (set: $relationship to (min: $relationship + 25, 100))
+    (goto: "midEnd")
+]
+
+(link: "You stand up abruptly, your anger boiling over as you slam your hands onto the table.")[
+    (set: $relationship to (max: $relationship - 25, 0))
+    (goto: "badEnd")
+]
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
+
+
+:: badEnd {"position":"850,700","size":"100,100"}
+"You know what? I don’t even know why I ever thought we could make this work!" You shout, drawing the attention of the people around you. "You’ve made everything about you, and it’s exhausting. I don’t even know why I was ever attracted to you!" You throw your chair back, pointing at her as you raise your voice, your face flushed with frustration. "I’m done! I’m so done with this!"
+
+She stands abruptly, eyes blazing with fury. "You’re such a selfish jerk!" she snaps, her voice trembling with the sting of anger and hurt. Her fists clench, and before you can react, she grabs her drink and hurls it straight at you, the cold liquid splashing across your clothes. "I don’t know why I even bothered!" she shouts, turning on her heel. "I deserve better than this!" She storms out of the café, her breath coming in short, angry bursts as she walks away, leaving you there, humiliated and alone.
+
+The tension in the room is palpable, and as the drink splashes across at you, the energy shifts. Her fury is raw, her words sharp as daggers. The anger that has been building for so long finally erupts, and she storms out, leaving a cold silence in her wake. You're left standing, soaking in disbelief, as the café’s atmosphere feels suddenly too small, too tight. The future is now filled with regret and unresolved pain. For them, there is only the sting of betrayal and the raw ache of a love that might have been, but is now lost.
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
+
+
+:: good1 {"position":"350,250","size":"100,100"}
+You catch her eye with a small smile and gesture to the counter.
+"I’ll grab us something—still the caramel latte, right?" Without waiting for her to respond, you head up and return with her favorite drink, setting it gently in front of her. "Figured I should start this off right." You settle in, looking at her earnestly. "So... I want to understand where we went wrong. I’m listening."
+
+Her eyes brighten as she sees the drink, a hint of a smile crossing her face. "Wow... you remembered." She wraps her hands around the cup, as if soaking up the warmth. "It’s... nice, actually, that you’d still think of the small things." She pauses, eyes meeting yours with a mix of gratitude and lingering hurt. "I keep wondering when we started losing that, you know? All those little things we used to do for each other. Maybe we got... comfortable, or maybe we just stopped trying as hard." She takes a sip, her voice softening. "But I don’t want to just drift apart. If we’re going to try again, I want us to actually try."
+
+(link: "You take a deep breath, meeting her gaze with a mix of honesty and vulnerability.")[
+    (set: $relationship to (min: $relationship + 25, 100))
+    (goto: "good2")
+]
+
+(link: "You nod, folding your hands together as you search for the right words.")[
+	(set: $relationship to (max: $relationship - 25, 0))
+    (goto: "mid2")
+]
+
+(link: "You shrug slightly, looking away.")[
+    (set: $relationship to (max: $relationship - 25, 0))
+    (goto: "mid2")
+]
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
+
+
+:: good2 {"position":"350,400","size":"100,100"}
+"I guess… I don’t know exactly when things started to change, but I know it wasn’t just you. Somewhere along the way, maybe we both stopped putting in the effort, or maybe life just got in the way." You pause, choosing your words carefully. "I never stopped caring, but it felt like we started running on autopilot. I’d like to try again—really try—if you’re still willing to work through it together."
+
+She listens intently, her expression softening as you speak. When you finish, she gives a small, appreciative nod. "Thank you for being honest," she says, her voice warm. "It means a lot to hear you say that... to feel like we’re both trying to understand where we went wrong." She takes a breath, eyes meeting yours with newfound determination. "I know I haven’t been perfect, and maybe we let things slip, but... I don’t want to lose you. If we’re both willing to really work on this, I’m all in. I want us to be stronger, together."
+
+(link: "You offer a small, hopeful smile, meeting her gaze.")[
+    (set: $relationship to (min: $relationship + 25, 100))
+    (goto: "good3")
+]
+
+(link: "You lean back, your expression thoughtful and a bit distant.")[
+    (set: $relationship to (max: $relationship - 25, 0))
+    (goto: "mid3")
+]
+
+(link: "You sigh, frustration flickering across your face as you shake your head.")[
+    (set: $relationship to (max: $relationship - 25, 0))
+    (goto: "mid3")
+]
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
+
+
+:: good3 {"position":"350,550","size":"100,100"}
+"Maybe... maybe we could try something new. Like, going to couples counseling? I think it might help to have someone there who can really listen to us both, help us get to the root of things without either of us feeling unheard." You pause, your voice softening. "I want this to work, and if there’s a chance that talking it out with someone else could make us stronger... I’d like to give that a try, if you’re willing."
+
+Her face softens, a smile slowly spreading as she reaches across the table to gently take your hand. "You really think we can work this out?" Her voice is quieter now, more sincere. "I’d be willing to try. I want this to work." She gives your hand a reassuring squeeze, her eyes filled with a warmth you haven’t seen in a while. "Maybe with some help, we can get back to what we had. I’m really glad you’re open to it," she adds, her tone filled with affection. "I’m in this, if you are."
+
+(link: "You lean forward, your heart lifting as a rush of warmth fills you.")[
+    (set: $relationship to (min: $relationship + 25, 100))
+    (goto: "goodEnd")
+]
+
+(link: "You take a deep breath, your gaze serious and a little sad as you look at her.")[
+    (set: $relationship to (max: $relationship - 25, 0))
+    (goto: "midEnd")
+]
+
+(link: "You look at her with sadness in your eyes, your shoulders slumping as the weight of the moment hits you.")[
+    (set: $relationship to (max: $relationship - 25, 0))
+    (goto: "midEnd")
+]
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
+
+
+:: goodEnd {"position":"350,700","size":"100,100"}
+You gently lift her hand, pressing a soft kiss to her palm, your eyes never leaving hers.
+"I love you," you say, your voice full of conviction. "I really do. And I know we’ve been through a lot, but I’m willing to fight for us. We’ll work things out, together. I know we can." You smile, a hopeful spark in your eyes. "This is just the beginning, and I’m excited for what comes next, for both of us."
+
+Her heart races as you speak, and when you press a kiss to her hand, it feels like everything she’s been holding onto comes rushing back. She can’t help but smile, feeling lighter, her worries melting away. She stands up and wraps her arms around you, pulling you into a tight hug, savoring the moment. "I love you too," she whispers, her voice thick with emotion. "I’m so happy we’re doing this. Together."
+
+The weight of their past conflicts seems to fade as the two of them step outside the coffee shop, hand in hand. The world feels just a little bit brighter for them now, as if the future is theirs to shape. With the connection between them rekindled, their steps are lighter, more assured. They’ve decided to give this love another chance, and the horizon feels full of possibilities. They walk together, sharing smiles, as the world around them fades into a peaceful backdrop. For now, their hearts are aligned, and the path ahead seems hopeful.
+
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
+
+
+
+:: intro {"position":"625,100","size":"100,100"}
+(set: $relationship to 50)
+"Hey," they say softly, barely meeting your eyes as they settle into the seat across from you. They shift slightly, hands slipping into their pockets before resting them on the table, bare fingers tapping softly against the wood. They glance at you, then away, as if testing the weight of the silence. "Thanks for... agreeing to meet up." A pause hangs between you both, heavy and unsure, before they add, "I just thought maybe we should, you know... actually talk things through. After everything." They glance out the window, a little too long, their voice dropping as they continue. "It just... it feels like we're at this point where we either figure it out or... or just let go, you know?"
+
+(link: "Buy them their favorite drink")[
+    (set: $relationship to (min: $relationship + 25, 100))
+    (goto: "good1")
+]
+
+(link: "Buy them a water")[
+    (goto: "mid1")
+]
+
+(link: "Buy yourself a drink")[
+    (set: $relationship to (max: $relationship - 25, 0))
+    (goto: "bad1")
+]
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
+
+
+
+
+:: mid1 {"position":"625,250","size":"100,100"}
+You give her a nod and get up, soon returning with a glass of water and placing it in front of her.
+"Didn’t know what you’d want... so I just grabbed this." You lean back, fingers tapping your cup. "I guess it’s good that we’re finally talking. I’d like to hear what you’ve been thinking."
+
+She gives you a small nod of thanks, taking the glass in her hands. "Water works... thanks." She takes a quiet sip, then sets the glass down, her fingers tracing patterns on the table absentmindedly. "I’ve been doing a lot of thinking," she begins, her voice steady but guarded. "It’s not that we didn’t care... we just stopped showing it. Or maybe we just started seeing things in each other we didn't like and... let it pile up." She sighs, looking at you. "I guess I'm trying to figure out if we even want the same things anymore, or if we’re just holding on because it’s familiar."
+
+(link: "You take a deep breath, meeting her gaze with a mix of honesty and vulnerability.")[
+    (set: $relationship to (min: $relationship + 25, 100))
+    (goto: "good2")
+]
+
+(link: "You nod, folding your hands together as you search for the right words.")[
+    (goto: "mid2")
+]
+
+(link: "You shrug slightly, looking away.")[
+    (set: $relationship to (max: $relationship - 25, 0))
+    (goto: "bad2")
+]
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
+
+
+:: mid2 {"position":"625,400","size":"100,100"}
+"Yeah… I feel it too. Something just drifted, and I don’t know when or why. I still care about you, and I don’t want to lose this, but… I honestly don’t know where to start to make it better." You sigh, looking down. "I don’t want us to end things, but I don’t know if we’re strong enough to fix it either. I guess… I’m just not sure where we go from here."
+
+She nods slowly, her fingers tracing the edge of her cup as she thinks. "Yeah... that’s kind of how I’ve been feeling too. It’s like... things just started fading, and neither of us knew how to stop it." She sighs, glancing at you with a mixture of sadness and reflection. "Honestly, when things started falling apart, I felt alone, even though we were right next to each other. Like maybe we were just... drifting along." She pauses, her voice softening. "I still want to figure out where it went wrong, even if we don’t have all the answers yet."
+
+(link: "You offer a small, hopeful smile, meeting her gaze.")[
+    (set: $relationship to (min: $relationship + 25, 100))
+    (goto: "good3")
+]
+
+(link: "You lean back, your expression thoughtful and a bit distant.")[
+    (goto: "mid3")
+]
+
+(link: "You sigh, frustration flickering across your face as you shake your head.")[
+    (set: $relationship to (max: $relationship - 25, 0))
+    (goto: "bad3")
+]
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
+
+
+:: mid3 {"position":"625,550","size":"100,100"}
+"I keep wondering… are we really still in this because we want to be, or because we’re just afraid to let go of something comfortable?" You glance at her, voice calm but unsure. "I care about you, and I don’t want to lose that, but… is it really worth it to keep holding on just because it feels familiar? Or are we just scared to be alone?"
+
+She sighs deeply, looking down at her hands, the weight of the conversation sinking in. "I feel the same way," she says softly, voice tinged with sadness. "It’s like... we’re just holding on to what’s familiar. And maybe that’s not enough anymore." She looks back up at you, meeting your eyes with a mix of hurt and resignation. "I don’t want to give up, but it feels like we might be running out of reasons to keep trying." She bites her lip, her voice quieter. "I don’t want to say it’s over, but... maybe we’re just scared to let go."
+
+
+(link: "You take a deep breath, your gaze serious and a little sad as you look at her.")[
+    (goto: "midEnd")
+]
+
+(link: "You look at her with sadness in your eyes, your shoulders slumping as the weight of the moment hits you.")[
+    (goto: "midEnd")
+]
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
+
+
+:: midEnd {"position":"625,700","size":"100,100"}
+"Maybe we were just too hopeful, you know?" you say, your voice soft. "We tried, but I think we’re both just holding on because we’re scared of what comes next." You pause, gathering your thoughts. "I think it’s better for both of us if we end things now, before we keep dragging this out. We can still end things on good terms. It’s just not working, and maybe it’s time to let go." You give her a sad smile, your heart heavy with the decision.
+
+Her eyes well with tears as she listens to you speak, the reality of it hitting her hard. She wanted to believe things could still work out, but deep down, she knows it’s for the best. She gives your hand a gentle squeeze, silently acknowledging the love they shared, even if it’s not enough anymore. "I’ll always care about you," she whispers, her voice thick with emotion. "But we both need to move on. We had something good."
+
+
+The two of them share a final, tender moment, there’s a sense of mutual understanding in the air. The love they once had is still present, lingering in their touch, but the decision is made. It’s time for them to part ways, and though their hearts ache, they know it’s the right choice. She walks away, turning back just once before leaving, her face a mixture of sadness and acceptance. As she disappears from view, you're is left in the quiet aftermath, heart heavy, but the weight of the past is finally being lifted.
+
+
+(if: $relationship is 100)[Relationship Meter: ██████████ 100]
+(else-if: $relationship is 75)[Relationship Meter: ████████░░ 75]
+(else-if: $relationship is 50)[Relationship Meter: █████░░░░░ 50]
+(else-if: $relationship is 25)[Relationship Meter: ███░░░░░░░░ 25]
+(else-if: $relationship is 0)[Relationship Meter: ░░░░░░░░░░ 0]
